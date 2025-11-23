@@ -1,0 +1,16 @@
+# PyCharm project settings
+.idea/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Data and results
+data/
+results/
+saved_models/
+gradcam_results/
+model_comparison/
