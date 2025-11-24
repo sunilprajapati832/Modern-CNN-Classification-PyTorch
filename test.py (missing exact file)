@@ -1,1 +1,61 @@
+import argparse
+import torch
+from utils.dataset_loader import get_dataloaders
+from models.model_builder import build_model
+from evaluate.metrics import evaluate_basic_metrics
+from evaluate.confusion import save_confusion_matrix
+from evaluate.topk import compute_topk
+from evaluate.gradcam import generate_gradcam
+from evaluate.misclassified import save_misclassified_images
+import os
+
+def main():
+    parser = argparse.ArgumentParser(description="Test a trained model on Caltech101")
+    parser.add_argument("--model", type=str, required=True,
+                        choices=["resnet50", "vgg16", "mobilenetv2", "efficientnet_b0"],
+                        help="Model architecture to load")
+    parser.add_argument("--weights", type=str, required=True,
+                        help="Path to saved model weights (.pth)")
+    parser.add_argument("--data", type=str, default="data/caltech101/101_ObjectCategories",
+                        help="Dataset directory path")
+    parser.add_argument("--batch", type=int, default=16, help="Batch size")
+    parser.add_argument("--save_dir", type=str, default="results",
+                        help="Directory to save evaluation outputs")
+    args = parser.parse_args()
+
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"\n➡ Using device: {device}")
+
+    # Load dataset (validation split acts as test set here)
+    _, val_loader, class_names = get_dataloaders(args.data, batch_size=args.batch)
+
+    # Build model and load weights
+    model = build_model(args.model, num_classes=len(class_names))
+    model.load_state_dict(torch.load(args.weights, map_location=device))
+    model = model.to(device)
+    model.eval()
+
+    # Create result directory
+    os.makedirs(args.save_dir, exist_ok=True)
+
+    # Evaluate metrics
+    preds, labels = evaluate_basic_metrics(model, val_loader, class_names, device, args.save_dir)
+
+    # Confusion matrix
+    save_confusion_matrix(labels, preds, class_names, args.save_dir)
+
+    # Top-k accuracy
+    compute_topk(model, val_loader, device, class_names, args.save_dir)
+
+    # Grad-CAM visualization
+    generate_gradcam(model, val_loader, class_names, device, args.save_dir)
+
+    # Misclassified samples
+    save_misclassified_images(model, val_loader, class_names, device, args.save_dir)
+
+    print("\n🎉 Testing complete! Results saved in:", args.save_dir)
+
+
+if __name__ == "__main__":
+    main()
 
