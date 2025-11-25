@@ -72,7 +72,7 @@ pip install -r requirements.txt
 - **ViT not tuned →** transformers need careful optimization and large datasets; Caltech‑101 is too small.
 - **Pretrained weights mismatch →** custom ResNet required classifier fixes, leading to partial weight loading.
 
-## 📖 Lessons Learned
+## Lessons Learned
 - Importance of clean, modular pipelines for reproducibility
 - Need for systematic hyperparameter tuning
 - Value of data augmentation (flips, rotations, color jitter)
@@ -88,4 +88,5 @@ pip install -r requirements.txt
 
 ## 👨‍💻 Author
 **Sunil Prajapati** <br> Researcher at MBM University | Data Analyst | Machine Learning Enthusiast 📫 LinkedIn | GitHub
+
 
