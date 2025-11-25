@@ -1,0 +1,19 @@
+# Core
+torch
+torchvision
+numpy
+pandas
+
+# Visualization
+matplotlib
+seaborn
+
+# Evaluation & Metrics
+scikit-learn
+
+# Progress bar
+tqdm
+
+# Image processing
+opencv-python
+Pillow
