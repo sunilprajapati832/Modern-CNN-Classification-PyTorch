@@ -2,6 +2,13 @@
 A deep learning project showcasing modern Convolutional Neural Networks (CNNs) and Vision Transformers (ViT) for image classification using PyTorch. This repository includes training, evaluation, visualization (GradCAM), and comparison of popular architectures. <br>
 ⚠️ **Note:** This project did not achieve high accuracy due to pipeline issues and incomplete objectives. It is shared here to highlight both the technical work and the lessons learned.
 
+## Dataset - caltech-101 Downlaod link: 
+**Caltech-101 Dataset** https://www.kaggle.com/datasets/imbikramsaha/caltech-101
+- 9,146 images across 101 object categories + 1 background category.
+- Each class contains ~40–800 images.
+- Image size ~300 × 200 pixels.
+- Categories include objects like airplanes, anchor, butterfly, chair, dolphin, elephant, etc.
+
 ## Features
 - **Model Zoo:** ResNet50, VGG16, MobileNetV2/V3, EfficientNet‑B0, ViT‑B16, plus custom ResNet checkpoints.
 - **Training Pipeline:** Modular training loop with GPU support (**main.py, train.py**).
@@ -93,4 +100,5 @@ pip install -r requirements.txt
 ## Connect with Me 🤝
 If you found this project interesting, let’s connect!  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Follow%20Me-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/sunil-prajapati832)
+
 
