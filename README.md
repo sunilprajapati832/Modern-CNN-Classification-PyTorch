@@ -48,42 +48,43 @@ pip install -r requirements.txt
 - **ROC & PR Curves →** roc_curve.png, pr_curve.png (binary only)
 - **Top‑K Accuracy →** topk.json
 
-
-
-
-
-
-
-
-
-
-
 ## Results
-Accuracy: Achieved >90% on benchmark dataset.
+| Model               | Top-1 Accuracy | Top-5 Accuracy | Inference Time (s) | Parameters (M) |
+|---------------------|----------------|----------------|---------------------|----------------|
+| ResNet50 (pretrained) | 0.55%         | 4.16%          | 137.654             | 23.72          |
+| EfficientNet-B0     | 0.82%          | 3.98%          | 67.048              | 4.14           |
+| MobileNet-V3        | 0.60%          | 3.13%          | 51.173              | 4.33           |
+| ViT-B16             | 4.72%          | 10.77%         | 1140.013            | 85.88          |
+| ResNet50 (custom)   | 1.01%          | 4.24%          | 264.243             | 23.72          |
 
-GradCAM: Visual explanations highlight discriminative regions.
-
-Model Comparison: ResNet50 outperformed VGG variants in both accuracy and efficiency.
-
----
-
-## 🛠️ Requirements
+## Requirements
 - Python 3.8+
 - PyTorch
 - NumPy, Pandas, Matplotlib, Seaborn
 - scikit-learn
----
 
-## 📌 Future Work
-- Add support for EfficientNet and Vision Transformers (ViT).
-- Hyperparameter tuning with Optuna.
-- Deployment with Flask/FastAPI.
+## Why Results Were Poor
+- **No data augmentation →** models overfit quickly and failed to generalize.
+- **No test set →** only train/validation split, so evaluation wasn’t robust.
+- **Short training schedule →** only 10–20 epochs, insufficient for deep models.
+- **Low learning rate →** training may have converged too slowly or got stuck.
+- **Pipeline instability →** modularity issues caused inconsistencies across models.
+- **ViT not tuned →** transformers need careful optimization and large datasets; Caltech‑101 is too small.
+- **Pretrained weights mismatch →** custom ResNet required classifier fixes, leading to partial weight loading.
 
----
+## 📖 Lessons Learned
+- Importance of clean, modular pipelines for reproducibility
+- Need for systematic hyperparameter tuning
+- Value of data augmentation (flips, rotations, color jitter)
+- Recognizing dataset limitations (Caltech‑101 is small and imbalanced)
+- Even failed experiments provide valuable insights into model behavior
 
+## Future Work
+- Add support for Optuna hyperparameter tuning
+- Extend ROC/PR curves to multi‑class evaluation
+- Train with data augmentation and longer schedules
+- Deployment with Flask/FastAPI
+- Explore larger datasets for ViT benchmarking
 
 ## 👨‍💻 Author
 **Sunil Prajapati** <br> Researcher at MBM University | Data Analyst | Machine Learning Enthusiast 📫 LinkedIn | GitHub
-
-
-
