@@ -86,7 +86,10 @@ pip install -r requirements.txt
 - Deployment with Flask/FastAPI
 - Explore larger datasets for ViT benchmarking
 
-## 👨‍💻 Author
-**Sunil Prajapati** <br> Researcher at MBM University | Data Analyst | Machine Learning Enthusiast 📫 LinkedIn | GitHub
+**License** This project is licensed under the MIT License (Attribution Required). If you use any part of this project, please give proper credit to the author – Sunil Prajapati.
 
+**If You Like This Project** Please star **⭐** this repository — it helps support my work and increases visibility!
 
+## Connect with Me 🤝
+If you found this project interesting, let’s connect!  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Follow%20Me-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/sunil-prajapati832)
