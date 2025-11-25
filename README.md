@@ -30,8 +30,8 @@ Modern-CNN-Classification-PyTorch/
 │── README.md            # Project documentation
 
 ## Installation
-git clone https://github.com/sunilprajapati832/Modern-CNN-Classification-PyTorch.git
-cd Modern-CNN-Classification-PyTorch
+git clone https://github.com/sunilprajapati832/Modern-CNN-Classification-PyTorch.git    <br>
+cd Modern-CNN-Classification-PyTorch                                                    <br>
 pip install -r requirements.txt
 
 ## Usage
@@ -93,3 +93,4 @@ pip install -r requirements.txt
 ## Connect with Me 🤝
 If you found this project interesting, let’s connect!  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Follow%20Me-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/sunil-prajapati832)
+
