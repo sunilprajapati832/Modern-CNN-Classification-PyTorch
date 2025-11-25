@@ -14,7 +14,7 @@ A deep learning project showcasing modern Convolutional Neural Networks (CNNs) a
 - **Visualization:** GradCAM heatmaps for model interpretability.
 - **Comparison:** Automated benchmarking across multiple models (**compare_models.py**).
 
-## 📂 Project Structure
+## Project Structure
 Modern-CNN-Classification-PyTorch/
 │── data/                # Caltech-101 dataset
 │── models/              # Model definitions and builder
@@ -88,3 +88,4 @@ pip install -r requirements.txt
 
 ## 👨‍💻 Author
 **Sunil Prajapati** <br> Researcher at MBM University | Data Analyst | Machine Learning Enthusiast 📫 LinkedIn | GitHub
+
