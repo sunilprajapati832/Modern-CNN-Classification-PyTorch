@@ -29,7 +29,36 @@ Modern-CNN-Classification-PyTorch/
 │── verify_gpu.py        # Check GPU availability
 │── README.md            # Project documentation
 
-## 📊 Results
+## Installation
+git clone https://github.com/sunilprajapati832/Modern-CNN-Classification-PyTorch.git
+cd Modern-CNN-Classification-PyTorch
+pip install -r requirements.txt
+
+## Usage
+- **1. Verify GPU** : python verify_gpu.py
+- **2. Train a Model** : python main.py --model resnet50 --epochs 20 --lr 0.0001 --batch 32 --data data/caltech101/101_ObjectCategories
+- **3. Compare Models** : python compare_models.py --data_dir data/caltech101/101_ObjectCategories --custom_model saved_models/resnet50_caltech101.pth
+- **4. Test a Model** : python test.py --model resnet50 --weights saved_models/resnet50_caltech101.pth --data data/caltech101/101_ObjectCategories --batch 32 --save_dir results/resnet50
+
+## Evaluation & Visualization
+- **Confusion Matrix →** confusion_matrix.png
+- **Grad-CAM →** gradcam_sample.png
+- **Metrics Report →** classification_report.json
+- **Misclassified Samples →** results/misclassified/
+- **ROC & PR Curves →** roc_curve.png, pr_curve.png (binary only)
+- **Top‑K Accuracy →** topk.json
+
+
+
+
+
+
+
+
+
+
+
+## Results
 Accuracy: Achieved >90% on benchmark dataset.
 
 GradCAM: Visual explanations highlight discriminative regions.
@@ -55,5 +84,6 @@ Model Comparison: ResNet50 outperformed VGG variants in both accuracy and effici
 
 ## 👨‍💻 Author
 **Sunil Prajapati** <br> Researcher at MBM University | Data Analyst | Machine Learning Enthusiast 📫 LinkedIn | GitHub
+
 
 
