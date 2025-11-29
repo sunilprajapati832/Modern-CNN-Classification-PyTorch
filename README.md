@@ -1,5 +1,5 @@
 # Modern CNN Classification in PyTorch
-A deep learning project showcasing modern Convolutional Neural Networks (CNNs) and Vision Transformers (ViT) for image classification using PyTorch. This repository includes training, evaluation, visualization (GradCAM), and comparison of popular architectures. <br>
+A deep learning project showcasing modern Convolutional Neural Networks (CNNs) and Vision Transformers (ViT) for image classification using PyTorch. This repository includes training, evaluation, visualization (GradCAM) and comparison of popular architectures. <br>
 ⚠️ **Note:** This project did not achieve high accuracy due to pipeline issues and incomplete objectives. It is shared here to highlight both the technical work and the lessons learned.
 
 ## Dataset - caltech-101 Downlaod link: 
@@ -100,5 +100,6 @@ pip install -r requirements.txt
 ## Connect with Me 🤝
 If you found this project interesting, let’s connect!  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Follow%20Me-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/sunil-prajapati832)
+
 
 
