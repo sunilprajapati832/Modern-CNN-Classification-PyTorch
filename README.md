@@ -7,7 +7,7 @@ A deep learning project showcasing modern Convolutional Neural Networks (CNNs) a
 - 9,146 images across 101 object categories + 1 background category.
 - Each class contains ~40–800 images.
 - Image size ~300 × 200 pixels.
-- Categories include objects like airplanes, anchor, butterfly, chair, dolphin, elephant, etc.
+- Categories include objects like airplanes, anchor, butterfly, chair, dolphin, elephant etc.
 
 ## Features
 - **Model Zoo:** ResNet50, VGG16, MobileNetV2/V3, EfficientNet‑B0, ViT‑B16, plus custom ResNet checkpoints.
@@ -100,6 +100,7 @@ pip install -r requirements.txt
 ## Connect with Me 🤝
 If you found this project interesting, let’s connect!  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Follow%20Me-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/sunil-prajapati832)
+
 
 
 
